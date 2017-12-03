@@ -23,10 +23,10 @@
         </activity>
         <service android:name="com.highbryds.gpstracker.GPSService" />
         <receiver android:name=".MyReciver"
-            
+
             >
             <intent-filter>
-                <action android:name="com.yourcompany.testIntent" />
+                <action android:name="com.highbryds.tracker" />
             </intent-filter>
         </receiver>
     </application>
