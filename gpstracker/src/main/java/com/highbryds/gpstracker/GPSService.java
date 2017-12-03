@@ -54,7 +54,7 @@ public class GPSService extends Service implements GoogleApiClient.ConnectionCal
     public static PendingIntent contentIntent;
     public static String NotificationTxt ;
     public static String NotificationTitle;
-    static int drawable_small ;
+   public static int drawable_small ;
     IBinder mBinder = new LocalBinder();
 
     @Override
