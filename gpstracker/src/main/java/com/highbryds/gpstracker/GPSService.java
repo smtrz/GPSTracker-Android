@@ -47,13 +47,13 @@ public class GPSService extends Service implements GoogleApiClient.ConnectionCal
     List<TrackMe_Location> TrackLoc;
     Context c = this;
     NotificationClass nc = new NotificationClass();
-    private static int PacketSize ;
-    private static int LocationInterval ;
-    private static int LocationFastestInterval ;
+    public static int PacketSize ;
+    public static int LocationInterval ;
+    public static int LocationFastestInterval ;
     /// private static final int drawableIcon = R.drawable.cast_ic_notification_small_icon;
-    private static PendingIntent contentIntent;
-    private static String NotificationTxt ;
-    private static String NotificationTitle;
+    public static PendingIntent contentIntent;
+    public static String NotificationTxt ;
+    public static String NotificationTitle;
     static int drawable_small ;
     IBinder mBinder = new LocalBinder();
 
