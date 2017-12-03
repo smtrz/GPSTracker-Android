@@ -14,9 +14,9 @@ Step #1 : Adding JitPack repository
 Add it in your root build.gradle at the end of repositories:
 ```
 allprojects {
-		repositories {
-			...
-			maven { url 'https://jitpack.io' }
+	repositories {
+		...
+		maven { url 'https://jitpack.io' }
 		}
 	}
 ```
@@ -26,7 +26,7 @@ Step #1 : Adding Dependecy
 Add the dependency
 ```
 dependencies {
-	        compile 'com.github.smtrz:GPSTracker-Android:0.1.0'
+	compile 'com.github.smtrz:GPSTracker-Android:0.1.0'
 	}
 ```
 Follow the steps and then you would be able to get the benefit of using this library .
@@ -69,11 +69,6 @@ public class MyReciver extends BroadcastReceiver {
     }
     }
    ``` 
- 
-
- 
-
-
 
 Step #5: Declaring Receiver in Manfiest
 -------
@@ -110,6 +105,7 @@ GPSService.LocationInterval = 20000;
         }
 
 ```
+Licensed Under MIT.
 
 Now you are good to go...
 Please let me know of any issues..
