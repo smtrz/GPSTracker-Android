@@ -45,10 +45,8 @@ Step #4 :
 --------
 Create a class and extend it with Broadcast Reciever,this is where you can recieve the location updates then you can log the location based information into you local DB/ Shared Prefences or Remote DB.
 
-
 public class MyReciver extends BroadcastReceiver {
-
-    @Override
+@Override
     public void onReceive(Context context, Intent intent) {
         double latitude = Double.valueOf(intent.getStringExtra("latitude"));
         double longitude = Double.valueOf(intent.getStringExtra("longitude"));
@@ -58,18 +56,15 @@ public class MyReciver extends BroadcastReceiver {
         
     //Set it to some model class then maintain it in List saved in  sharedprefences - this will help you call the SendtoInternet Method
     //less frequently - i mean based on the number of list items you can take decision that once the list contains 5 items- send it to //the server - Its totally upto you.
-   SendtoInternet()
+   SendtoInternet(latitude,longitude,altitude,speed)
          
     
     }
-    
-    public void SendtoInternet(double lat,double longi,double speed,double altitude){
-    // you server sending web service here...
     }
+    
+ 
 
-
-   
-}
+ 
 
 
 
