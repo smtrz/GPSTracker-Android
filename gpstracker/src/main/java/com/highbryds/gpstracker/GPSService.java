@@ -47,14 +47,14 @@ public class GPSService extends Service implements GoogleApiClient.ConnectionCal
     List<TrackMe_Location> TrackLoc;
     Context c = this;
     NotificationClass nc = new NotificationClass();
-    private static int PacketSize = 2;
-    private static int LocationInterval = 20000;
-    private static int LocationFastestInterval = 15000;
+    private static int PacketSize ;
+    private static int LocationInterval ;
+    private static int LocationFastestInterval ;
     /// private static final int drawableIcon = R.drawable.cast_ic_notification_small_icon;
     private static PendingIntent contentIntent;
-    private static String NotificationTxt = "";
-    private static String NotificationTitle = "";
-    static int d = R.drawable.ic_check;
+    private static String NotificationTxt ;
+    private static String NotificationTitle;
+    static int drawable_small ;
     IBinder mBinder = new LocalBinder();
 
     @Override
@@ -110,7 +110,7 @@ public class GPSService extends Service implements GoogleApiClient.ConnectionCal
     public void onLocationChanged(Location location) {
         try {
 
-            Intent broadcastIntent = new Intent("com.yourcompany.testIntent");
+            Intent broadcastIntent = new Intent("com.highbryds.tracker");
             //  broadcastIntent.setAction(MainActivity.mBroadcastStringAction);
             broadcastIntent.putExtra("latitude", String.valueOf(location.getLatitude()));
             broadcastIntent.putExtra("longitude", String.valueOf(location.getLongitude()));
@@ -172,7 +172,7 @@ public class GPSService extends Service implements GoogleApiClient.ConnectionCal
             nc.createMainNotificationChannel(this);
             //building Notification.
             Notification.Builder notifi = new Notification.Builder(getApplicationContext(), nc.getMainNotificationId());
-            notifi.setSmallIcon(d);
+            notifi.setSmallIcon(drawable_small);
             notifi.setContentTitle(NotificationTitle);
             notifi.setContentText(NotificationTxt);
             notifi.setContentIntent(contentIntent);
