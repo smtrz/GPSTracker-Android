@@ -20,16 +20,10 @@ import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationServices;
-//import com.google.gson.reflect.TypeToken;
 
 import com.highbryds.gpstracker.Model.TrackMe_Location;
 import com.highbryds.gpstracker.Utils.NotificationClass;
 
-
-import java.lang.reflect.Type;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.List;
 
 
@@ -44,18 +38,16 @@ public class GPSService extends Service implements GoogleApiClient.ConnectionCal
     private static final String LOGSERVICE = "#######";
     private LocationRequest mLocationRequest;
     private GoogleApiClient mGoogleApiClient;
-    List<TrackMe_Location> TrackLoc;
     Context c = this;
     NotificationClass nc = new NotificationClass();
-    public static int PacketSize ;
-    public static int LocationInterval ;
-    public static int LocationFastestInterval ;
+    public static int PacketSize;
+    public static int LocationInterval;
+    public static int LocationFastestInterval;
     /// private static final int drawableIcon = R.drawable.cast_ic_notification_small_icon;
     public static PendingIntent contentIntent;
-    public static String NotificationTxt ;
+    public static String NotificationTxt;
     public static String NotificationTitle;
-   public static int drawable_small ;
-    IBinder mBinder = new LocalBinder();
+    public static int drawable_small;
 
     @Override
     public void onCreate() {
@@ -79,7 +71,7 @@ public class GPSService extends Service implements GoogleApiClient.ConnectionCal
 
     @Override
     public IBinder onBind(Intent intent) {
-        return mBinder;
+        return null;
     }
 
     @Override
@@ -191,7 +183,7 @@ public class GPSService extends Service implements GoogleApiClient.ConnectionCal
             Notification notification = new Notification.Builder(getApplicationContext())
                     .setContentTitle(NotificationTitle)
                     .setContentText(NotificationTxt)
-                    .setSmallIcon(R.drawable.ic_check)
+                    .setSmallIcon(drawable_small)
                     .setContentIntent(contentIntent)
                     .setOngoing(true).build();
             startForeground(1, notification);
@@ -200,15 +192,5 @@ public class GPSService extends Service implements GoogleApiClient.ConnectionCal
 
     }
 
-    public Location calling_method(Location l) {
-        //    System.out.println("##############");
 
-        return l;
-    }
-
-    public class LocalBinder extends Binder {
-        public GPSService getServerInstance() {
-            return GPSService.this;
-        }
-    }
 }
