@@ -12,32 +12,38 @@ Step #1 :
 --------
 
 Add it in your root build.gradle at the end of repositories:
-	allprojects {
+```
+allprojects {
 		repositories {
 			...
 			maven { url 'https://jitpack.io' }
 		}
 	}
-
+```
 Step #1 :
 -------
 
 Add the dependency
-	dependencies {
+```
+dependencies {
 	        compile 'com.github.smtrz:GPSTracker-Android:0.1.0'
 	}
-
+```
 Follow the steps and then you would be able to get the benefit of using this library .
 
 Step #3 :
 --------
 Add the following into your manifest :
 Service tag :
+```
 <service android:name="com.highbryds.gpstracker.GPSService"></service>
+```
 Add Permissions:
+```
 <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
  <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
  <uses-permission android:name="android.permission.INTERNET" />
+```
 
 Starting from Android M  - You have to take RunTime Permission from the user,make sure to take Runtime permissions before start GPSService from the library.
 
@@ -45,6 +51,7 @@ Step #4 :
 --------
 Create a class and extend it with Broadcast Reciever,this is where you can recieve the location updates then you can log the location based information into you local DB/ Shared Prefences or Remote DB.
 
+```
 public class MyReciver extends BroadcastReceiver {
 @Override
     public void onReceive(Context context, Intent intent) {
@@ -61,7 +68,7 @@ public class MyReciver extends BroadcastReceiver {
     
     }
     }
-    
+   ``` 
  
 
  
@@ -70,8 +77,8 @@ public class MyReciver extends BroadcastReceiver {
 
 Step #5:
 -------
-Decalre the reciever in the manifest file :
-
+Declare the reciever in the manifest file :
+```
 <receiver android:name=".MyReciver">
             <intent-filter>
                 <action android:name="com.highbryds.tracker" />
@@ -79,7 +86,7 @@ Decalre the reciever in the manifest file :
         </receiver>
         
         
-
+```
 
 Now you are good to go...
 Please let me know of any issues..
