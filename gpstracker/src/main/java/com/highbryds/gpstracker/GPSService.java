@@ -21,7 +21,6 @@ import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationServices;
 
-import com.highbryds.gpstracker.Model.TrackMe_Location;
 import com.highbryds.gpstracker.Utils.NotificationClass;
 
 import java.util.List;
