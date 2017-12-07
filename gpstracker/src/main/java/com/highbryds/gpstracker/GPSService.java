@@ -170,8 +170,11 @@ public class GPSService extends Service implements GoogleApiClient.ConnectionCal
             //getting notification object from notification builder.
             Notification n = notifi.build();
 
+            int mNotificationId = 001;
+
             NotificationManager mNotificationManager =
                     (NotificationManager) c.getSystemService(Context.NOTIFICATION_SERVICE);
+            mNotificationManager.notify(mNotificationId, n);
 
             //  startting foreground
             startForeground(1, n);
