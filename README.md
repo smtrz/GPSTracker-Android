@@ -47,7 +47,7 @@ Add Permissions:
 
 Starting from Android M  - You have to take RunTime Permission from the user,make sure to take Runtime permissions before start GPSService from the library.
 
-Step #4 : Creating a Class and Extending it with Braodcast Receiver
+Step #4 : Creating a Class and Extending it with Broadcast Receiver
 --------
 Create a class and extend it with Broadcast Reciever,this is where you can recieve the location updates then you can log the location based information into you local DB/ Shared Prefences or Remote DB.
 
