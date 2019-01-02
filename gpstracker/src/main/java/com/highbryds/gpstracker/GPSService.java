@@ -229,4 +229,10 @@ public class GPSService extends Service implements GoogleApiClient.ConnectionCal
 
 
     }
+    public void setLocationInterval(int LocationInterval) {
+
+        this.LocationInterval = LocationInterval;
+
+
+    }
 }
