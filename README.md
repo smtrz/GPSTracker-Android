@@ -26,7 +26,7 @@ Step #1 : Adding Dependecy
 Add the dependency
 ```
 dependencies {
-	compile 'com.github.smtrz:GPSTracker-Android:0.1.0'
+	implementation 'com.github.smtrz:GPSTracker-Android:1.0.3'
 	}
 ```
 Follow the steps and then you would be able to get the benefit of using this library .
@@ -43,6 +43,8 @@ Add Permissions:
 <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
  <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
  <uses-permission android:name="android.permission.INTERNET" />
+ <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
 ```
 
 Starting from Android M  - You have to take RunTime Permission from the user,make sure to take Runtime permissions before start GPSService from the library.
