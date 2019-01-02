@@ -40,13 +40,13 @@ public class GPSService extends Service implements GoogleApiClient.ConnectionCal
     Context c = this;
     NotificationClass nc = new NotificationClass();
     public static int PacketSize;
-    private int LocationInterval;
-    private int LocationFastestInterval;
+    public static int LocationInterval;
+    public static int LocationFastestInterval;
     /// private static final int drawableIcon = R.drawable.cast_ic_notification_small_icon;
-    private PendingIntent contentIntent;
-    private String NotificationTxt;
-    private String NotificationTitle;
-    private int drawable_small;
+    public static PendingIntent contentIntent;
+    public static String NotificationTxt;
+    public static String NotificationTitle;
+    public static int drawable_small;
 
     @Override
     public void onCreate() {
@@ -195,44 +195,4 @@ public class GPSService extends Service implements GoogleApiClient.ConnectionCal
     }
 
 
-    public void setFastestInterval(int fastestInterval) {
-
-        this.LocationFastestInterval = fastestInterval;
-
-
-    }
-
-    public void setNotificationTitle(String NotificationTitle) {
-
-        this.NotificationTitle = NotificationTitle;
-
-
-    }
-
-    public void setNotificationTxt(String NotificationTxt) {
-
-        this.NotificationTxt = NotificationTxt;
-
-
-    }
-
-    public void setdrawable_small(int drawable_small) {
-
-        this.drawable_small = drawable_small;
-
-
-    }
-
-    public void setcontentIntent(PendingIntent contentIntent) {
-
-        this.contentIntent = contentIntent;
-
-
-    }
-    public void setLocationInterval(int LocationInterval) {
-
-        this.LocationInterval = LocationInterval;
-
-
-    }
 }
