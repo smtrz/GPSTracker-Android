@@ -27,6 +27,7 @@ Add the dependency
 ```
 dependencies {
 	implementation 'com.github.smtrz:GPSTracker-Android:1.0.3'
+	implementation 'com.google.android.gms:play-services-location:17.1.0'
 	}
 ```
 Follow the steps and then you would be able to get the benefit of using this library .
